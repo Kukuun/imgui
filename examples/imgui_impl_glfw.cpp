@@ -76,6 +76,7 @@
 enum GlfwClientApi
 {
     GlfwClientApi_Unknown,
+    GlfwClientApi_Direct3D,
     GlfwClientApi_OpenGL,
     GlfwClientApi_Vulkan
 };
@@ -261,6 +262,10 @@ static bool ImGui_ImplGlfw_Init(GLFWwindow* window, bool install_callbacks, Glfw
 
     g_ClientApi = client_api;
     return true;
+}
+
+bool ImGui_ImplGlfw_InitForDirect3D(GLFWwindow* window, bool install_callbacks) {
+    return ImGui_ImplGlfw_Init(window, install_callbacks, GlfwClientApi_OpenGL);
 }
 
 bool ImGui_ImplGlfw_InitForOpenGL(GLFWwindow* window, bool install_callbacks)
