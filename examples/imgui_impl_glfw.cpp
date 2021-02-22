@@ -265,7 +265,7 @@ static bool ImGui_ImplGlfw_Init(GLFWwindow* window, bool install_callbacks, Glfw
 }
 
 bool ImGui_ImplGlfw_InitForDirect3D(GLFWwindow* window, bool install_callbacks) {
-    return ImGui_ImplGlfw_Init(window, install_callbacks, GlfwClientApi_OpenGL);
+    return ImGui_ImplGlfw_Init(window, install_callbacks, GlfwClientApi_Direct3D);
 }
 
 bool ImGui_ImplGlfw_InitForOpenGL(GLFWwindow* window, bool install_callbacks)
